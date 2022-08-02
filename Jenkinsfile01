@@ -1,0 +1,22 @@
+
+
+pipeline {
+    agent any 
+    stages {
+        stage('Build') { 
+            steps {
+                echo "this is my first pipeline" 
+            }
+        }
+        stage('Test') { 
+            steps {
+                sh "echo 'this is second' " 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                echo " from Jenkins"
+            }
+        }
+    }
+}
